@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FeedActivity"
+    android:background="@color/white">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="330dp"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:background="#006CA3"
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:text="Hello,"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:text="Ayush"
+                        android:textColor="@color/white"
+                        android:textSize="30sp"
+                        android:layout_marginStart="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_marginTop="40dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:src="@drawable/profile_img"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"/>
+
+                <TextView
+                    android:id="@+id/browseBy"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                    android:layout_marginTop="20dp"
+                    android:text="Browse By"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/latest"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/browseBy"
+                    android:layout_marginTop="20dp"
+                    android:text="Latest"
+                    android:textColor="@color/black"
+                    android:background="@drawable/img"
+                    android:textSize="11sp"
+                    android:gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"/>
+
+                <TextView
+                    app:layout_constraintTop_toBottomOf="@+id/browseBy"
+                    app:layout_constraintStart_toEndOf="@+id/latest"
+                    android:layout_marginTop="20dp"
+                    android:text="Older"
+                    android:textColor="@color/black"
+                    android:background="@drawable/img"
+                    android:textSize="11sp"
+                    android:gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                tools:listitem="@layout/recyclerview_item2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/refreshBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/img"
+        android:text="Refresh"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:layout_width="100dp"
+        android:layout_height="40dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
